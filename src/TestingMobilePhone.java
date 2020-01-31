@@ -25,5 +25,18 @@ public class TestingMobilePhone {
         jaretStore.addPhone(phone5);
 
         System.out.printf("Inventory Value: $%.2f%n", jaretStore.getInventoryValue());
+
+        MobilePhone expensivePhone = jaretStore.getMostExpensive();
+        System.out.printf("The most expensive phone is: %s%n",expensivePhone);
+        System.out.printf("it's memory is: %dGb, camera: %.1f Mp%n",
+                expensivePhone.getMemoryInGB(), expensivePhone.getCameraResolution());
+        System.out.printf("it's price is: $%.2f%n%n", expensivePhone.getPrice());
+
+        MobilePhone leastExpensive = jaretStore.getLeastExpensive();
+        System.out.printf("The least expensive phone is: %s%n",leastExpensive);
+        System.out.printf("it's memory is: %dGb, camera: %.1f Mp%n",
+                leastExpensive.getMemoryInGB(), leastExpensive.getCameraResolution());
+        System.out.printf("it's price is: $%.2f%n", leastExpensive.getPrice());
+
     }
 }

@@ -85,4 +85,23 @@ public class PhoneStore {
         return mostExpensive;
     }
 
+    public MobilePhone getLeastExpensive()
+    {
+        if (inventory.size()==0)
+            return null;
+
+        //assume the first element is the most expensive
+        MobilePhone leastExpensive = inventory.get(0);
+
+        //loop over all the phones to compare the prices
+        for (MobilePhone phone : inventory)
+        {
+            if (phone.getPrice() < leastExpensive.getPrice())
+                leastExpensive = phone;
+        }
+
+        return leastExpensive;
+    }
+
+
 }
