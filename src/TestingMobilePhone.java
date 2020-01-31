@@ -16,5 +16,14 @@ public class TestingMobilePhone {
         System.out.printf("phone1: %s%n", phone1);
         System.out.printf("phone2: %s%n", phone2);
         System.out.printf("phone3: %s%n", phone3);
+
+        PhoneStore jaretStore = new PhoneStore("Jarets Phone Emporium","10 Hurontario St");
+        jaretStore.addPhone(phone1);
+        jaretStore.addPhone(phone2);
+        jaretStore.addPhone(phone3);
+        jaretStore.addPhone(phone4);
+        jaretStore.addPhone(phone5);
+
+        System.out.printf("Inventory Value: $%.2f%n", jaretStore.getInventoryValue());
     }
 }
